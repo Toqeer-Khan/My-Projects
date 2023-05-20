@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  width: 100%;
+}
+
+h1 {
+  margin: 24px auto;
+  margin-left: 24px;
+}
+
+header {
+  width: 100%;
+  height: 75px;
+  background-color: #4caf50;
+  text-align: center;
+  padding: 18px;
+}
+
+.navigation {
+  color: black;
+}
+
+.navigation button {
+  padding: 8px;
+  border: none;
+  font-weight: bolder;
+  font-size: 18px;
+  text-align: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.dropdown-btn {
+  background-color: #4caf50;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content .alpha {
+  font-size: 12px;
+}
+
+.accordion {
+  width: 700px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+.items {
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 24px;
+  row-gap: 32px;
+}
+.number,
+.text {
+  font-size: 24px;
+  font-weight: 500;
+  color: #087f5b;
+}
+.number {
+  color: #ced4da;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  stroke: #087f5b;
+}
+.hiddon-box {
+  grid-column: 2;
+  display: none;
+}
+
+.hiddon-box p {
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.hiddon-box ul {
+  margin-left: 20px;
+  color: #868e96;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.open {
+  border-top: 8px solid #087f5b;
+}
+
+.open .hiddon-box {
+  display: block;
+}
+
+.open .number,
+.open .text {
+  color: #087f5b;
+}
+
+.accordion-2 {
+  width: 700px;
+  margin: 100px auto;
+  background-color: #7d97a5;
+  margin: 8px;
+}
+
+.accordion-tab label {
+  color: aqua;
+  font-size: 16px;
+  background-color: #4d634d;
+  line-height: 24px;
+  font-weight: 500;
+  display: block;
+  position: relative;
+  padding: 16px 32px;
+  cursor: pointer;
+}
+
+.accordion-content img {
+  width: 150px;
+  height: auto;
+}
+
+.accordion-tab .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.accordion-tab .accordion-toggle:checked ~ .accordion-content {
+  max-height: 100vh;
+}
